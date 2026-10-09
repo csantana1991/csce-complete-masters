@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #fbf9f5;
+  --surface: #ffffff;
+  --surface-2: #f6f1eb;
+  --line: #e9e0d3;
+  --ink: #171613;
+  --muted: #7a786f;
+  --accent: #500000;
+  --accent-ink: #ffffff;
+  --gold: #8a6a32;
+}
+
+.dark {
+  --bg: #0f0e0c;
+  --surface: #1b1a18;
+  --surface-2: #252320;
+  --line: #2e2b28;
+  --ink: #f5f2ed;
+  --muted: #a9a59d;
+  --accent: #e8c18a;
+  --accent-ink: #1a1206;
+  --gold: #e8c18a;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-gold: var(--gold);
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  .display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
